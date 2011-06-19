@@ -1,0 +1,29 @@
+<h1>OpenToDo</h1>
+
+<br />
+<%= link_to 'New Task', new_task_path %> &nbsp;&nbsp;|&nbsp;&nbsp;
+<%= link_to 'Completed Tasks', 'completed' %> &nbsp;&nbsp;|&nbsp;&nbsp;
+<%= link_to 'Manage Tags', tags_path %>
+<br /> 
+
+<table>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Tag</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tasks.each do |task| %>
+  <tr>
+	<td><%= check_box(task, task.isCompleted, "onclick" => "document.location.href='complete/#{task.id}'") %></td>	
+    <td><%= task.name %></td>
+	<td><%= current_user.task.tag.name %></td>
+    <td><%= link_to 'Edit', edit_task_path(task) %></td>
+    <td><%= link_to 'Delete', task, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

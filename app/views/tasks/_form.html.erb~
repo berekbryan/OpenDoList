@@ -1,0 +1,15 @@
+<%= form_for(@task) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+	<%= f.label :tag_id %><br />
+    <%= f.collection_select :tag_id, user.tags.all, :id, :name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

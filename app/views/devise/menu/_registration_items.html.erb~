@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+  <li>
+    <%= button_to('Edit account', edit_user_registration_path) %>
+  </li>
+<% else %>
+  <li>
+    <%= button_to('Sign up', new_user_registration_path)  %>
+  </li>
+<% end %>

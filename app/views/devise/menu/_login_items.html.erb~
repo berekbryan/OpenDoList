@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+  <li>
+    <%= button_to('Logout', destroy_user_session_path) %>        
+  </li>
+<% else %>
+  <li>
+    <%= button_to('Login', new_user_session_path)  %>  
+  </li>
+<% end %>
