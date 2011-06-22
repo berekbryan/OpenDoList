@@ -1,5 +1,7 @@
 class TagsController < ApplicationController
 
+  before_filter :authenticate_user!
+
   # list all tags for users
   def index
   	user = current_user

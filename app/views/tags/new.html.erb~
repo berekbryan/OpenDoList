@@ -1,8 +1,7 @@
-<h3>Editing tag</h3>
+<h1>New tag</h1>
 
 <%= render 'form' %>
 
 <br />
 
 <%= button_to 'Back to Tags', tags_path, :method => "get" %>
-

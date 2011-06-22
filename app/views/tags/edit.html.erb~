@@ -1,0 +1,8 @@
+<h3>Editing tag</h3>
+
+<%= render 'form' %>
+
+<br />
+
+<%= button_to 'Back to Tags', tags_path %>
+

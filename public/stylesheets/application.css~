@@ -20,6 +20,18 @@
 	width: 800px;
 }
 
+#footer {
+	margin-left: auto; 
+	margin-right: auto; 
+	padding: 10px; 
+	width: 800px;	
+}
+
+.wide {
+	width: 100px;
+}
+
+
 /*
  * MENU
  */

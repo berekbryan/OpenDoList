@@ -1,20 +1,19 @@
-<h1>Manage Tags</h1>
+<h3>Manage Tags</h3>
 
-<br />
-<%= link_to 'New Tag', new_tag_path %>
-<%= link_to 'ToDo List', tasks_path %>
+<%= button_to 'New Tag', new_tag_path, :method => "get" %>
+
 <br />
 
 <table>
   <tr>
-    <th>Name</th>
+    <th class="align_left">Name</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @tags.each do |tag| %>
   <tr>
-    <td><%= tag.name %></td>
+    <td class="wide"><%= tag.name %></td>
     <td><%= link_to 'Edit', edit_tag_path(tag) %></td>
     <td><%= link_to 'Delete', tag, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
@@ -22,3 +21,6 @@
 </table>
 
 <br />
+
+<%= button_to 'Back to Tasks', tasks_path, :method => "get" %>
+

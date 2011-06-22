@@ -1,6 +1,12 @@
 <h3>Completed Tasks</h3>
 
 <table>
+	<tr>
+		<td><%= button_to 'Tasks', tasks_path, :method => "get" %></td>
+		<td><%= button_to 'Tags', tags_path, :method => "get" %></td>
+</table>
+
+<table>
   <tr>
     <th></th>
     <th>Name</th>
@@ -19,6 +25,4 @@
 </table>
 
 <br />
-
-<%= button_to 'Back to Tasks', tasks_path, :method => "get" %>
 

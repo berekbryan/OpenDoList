@@ -1,9 +1,13 @@
-<h1>OpenToDo</h1>
+<h3>Manage Tasks</h3>
 
-<br />
-<%= link_to 'New Task', new_task_path %> &nbsp;&nbsp;|&nbsp;&nbsp;
-<%= link_to 'Completed Tasks', 'completed' %> &nbsp;&nbsp;|&nbsp;&nbsp;
-<%= link_to 'Manage Tags', tags_path %>
+<table>
+	<tr>
+		<td><%= button_to 'New Task', new_task_path, :method => "get" %></td>
+		<td><%= button_to 'Completed Tasks', 'completed', :method => "get" %></td>
+		<td><%= button_to 'Tags', tags_path, :method => "get" %></td>
+	</tr>
+</table>
+
 <br /> 
 
 <table>
@@ -27,3 +31,4 @@
 </table>
 
 <br />
+
